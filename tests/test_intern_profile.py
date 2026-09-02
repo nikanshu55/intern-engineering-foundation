@@ -11,6 +11,10 @@ class TestInternProfile(unittest.TestCase):
         self.assertTrue(department)
         self.assertTrue(skills)
 
+    def test_skills_are_list(self):
+        self.assertIsInstance(skills, list)
+        self.assertGreater(len(skills), 0)
+
 
 if __name__ == "__main__":
     unittest.main()
